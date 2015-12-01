@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_thrid"
+    tools:context="com.mdwikuntobayu.androidbasic.ThridActivity">
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:id="@+id/name_lv"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <SeekBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/try_sb"
+        android:layout_below="@+id/name_lv"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="33dp"
+        android:indeterminate="false"
+        android:max="5"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/try_sb_txt"
+        android:layout_marginTop="28dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
+        android:layout_below="@+id/try_sb"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Go WWW"
+        android:id="@+id/url_go_btn"
+        android:layout_below="@+id/try_sb_txt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/url_go_txt"
+        android:layout_below="@+id/url_go_btn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="https://www.google.com"/>
+
+    <WebView
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:id="@+id/go_url_wv"
+        android:layout_below="@+id/url_go_txt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <ExpandableListView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:id="@+id/expandableListView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/go_url_wv"/>
+</RelativeLayout>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/scrollView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".MainActivity"
+        tools:showIn="@layout/activity_main">
+
+        <Button
+            android:id="@+id/calculate_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="Calculate"/>
+
+        <EditText
+            android:id="@+id/first_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/result_lbl"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/result_lbl"
+            android:layout_below="@+id/calculate_btn"/>
+
+        <EditText
+            android:id="@+id/second_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/first_txt"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/first_txt"
+            android:layout_below="@+id/first_txt"/>
+
+        <TextView
+            android:id="@+id/result_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/calculate_btn"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="Result"/>
+
+        <CheckBox
+            android:id="@+id/inu_ck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/second_txt"
+            android:layout_marginTop="26dp"
+            android:checked="false"
+            android:text="inu"/>
+
+        <CheckBox
+            android:id="@+id/neko_ck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/inu_ck"
+            android:checked="false"
+            android:text="neko"/>
+
+        <Button
+            android:id="@+id/see_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/second_txt"
+            android:layout_alignRight="@+id/second_txt"
+            android:layout_alignTop="@+id/inu_ck"
+            android:text="See Check"/>
+
+        <RadioGroup
+            android:id="@+id/meat_rbg"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/neko_ck">
+
+            <RadioButton
+                android:id="@+id/niku_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Niku"/>
+
+            <RadioButton
+                android:id="@+id/sakana_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Sakana"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/meat_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/meat_rbg"
+            android:text="Meat Check"/>
+
+        <RatingBar
+            android:id="@+id/start_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/meat_btn"
+            android:layout_marginTop="26dp"
+            android:numStars="3"
+            android:stepSize="1"/>
+
+        <Button
+            android:id="@+id/rating_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/start_rb"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_toEndOf="@+id/meat_rbg"
+            android:layout_toRightOf="@+id/meat_rbg"
+            android:text="Give Rating"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next Page"
+            android:id="@+id/next_second_btn"
+            android:layout_alignBottom="@+id/meat_btn"
+            android:layout_alignRight="@+id/second_txt"
+            android:layout_alignEnd="@+id/second_txt"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fourth Page"
+            android:id="@+id/fourth_btn"
+            android:layout_below="@+id/see_btn"
+            android:layout_alignRight="@+id/second_txt"
+            android:layout_alignEnd="@+id/second_txt"
+            />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="five page"
+            android:id="@+id/five_btn"
+            android:layout_below="@+id/fourth_btn"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Six Page"
+            android:id="@+id/six_btn"
+            android:layout_below="@+id/start_rb"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seven"
+            android:id="@+id/seven_btn"
+            android:layout_alignTop="@+id/six_btn"
+            android:layout_toRightOf="@+id/six_btn"
+            android:layout_toEndOf="@+id/six_btn"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="eight"
+            android:id="@+id/btn_eight"
+            android:layout_below="@+id/six_btn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nine"
+            android:id="@+id/btn_nine"
+            android:layout_alignTop="@+id/btn_eight"
+            android:layout_toRightOf="@+id/btn_eight"
+            android:layout_toEndOf="@+id/btn_eight"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ten"
+            android:id="@+id/btn_ten"
+            android:layout_alignTop="@+id/btn_nine"
+            android:layout_toRightOf="@+id/btn_nine"
+            android:layout_toEndOf="@+id/btn_nine"/>
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Android Basic</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="login_lbl_str">Login Form</string>
+    <string name="username_lbl_str">Username</string>
+    <string name="password_lbl_str">Password</string>
+    <string name="login_btn_str">Login</string>
+    <string name="attempt_lbl_str">Attempt :</string>
+    <string name="title_activity_thrid">ThridActivity</string>
+    <string name="title_activity_fourth">FourthActivity</string>
+    <string name="title_activity_five">FiveActivity</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_six">SixActivity</string>
+    <string name="title_activity_seven">SevenActivity</string>
+    <string name="title_activity_eight">EightActivity</string>
+    <string name="title_activity_nine">NineActivity</string>
+    <string name="title_activity_ten">TenActivity</string>
+</resources>

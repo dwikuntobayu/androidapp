@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_six"
+    tools:context="com.mdwikuntobayu.androidbasic.SixActivity">
+
+    <AutoCompleteTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/name_actxt"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TimePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/clock_tp"
+        android:layout_below="@+id/name_actxt"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show TIme"
+        android:id="@+id/clock_btn"
+        android:layout_below="@+id/clock_tp"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="time dial"
+        android:id="@+id/time_dial_btn"
+        android:layout_alignBottom="@+id/clock_btn"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="date dial"
+        android:id="@+id/date_dial_btn"
+        android:layout_alignBottom="@+id/time_dial_btn"
+        android:layout_toRightOf="@+id/time_dial_btn"
+        android:layout_toEndOf="@+id/time_dial_btn"
+        android:layout_marginLeft="29dp"
+        android:layout_marginStart="29dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/date_picker_txt"
+        android:layout_below="@+id/clock_btn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="26dp"
+        android:layout_alignRight="@+id/time_dial_btn"
+        android:layout_alignEnd="@+id/time_dial_btn"/>
+</RelativeLayout>

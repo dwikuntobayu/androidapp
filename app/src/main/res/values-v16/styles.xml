@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="random_txt">
+        <item name="android:color">#46C7F2</item>
+        <item name="android:hint">Click Button "Get Random Number"</item>
+        <item name="android:fontFamily">Verdana</item>
+    </style>
+</resources>

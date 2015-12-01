@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_seven"
+    tools:context="com.mdwikuntobayu.androidbasic.SevenActivity">
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="show notification"
+        android:id="@+id/sn_btn"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Service"
+        android:id="@+id/start_service_btn"
+        android:layout_alignTop="@+id/sn_btn"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stop service"
+        android:id="@+id/stop_service_btn"
+        android:layout_below="@+id/start_service_btn"
+        android:layout_alignRight="@+id/start_service_btn"
+        android:layout_alignEnd="@+id/start_service_btn"/>
+
+    <EditText
+        style="@style/parent_style.random_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/random_txt"
+        android:layout_alignBottom="@+id/stop_service_btn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/stop_service_btn"
+        android:layout_toStartOf="@+id/stop_service_btn"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Random Number"
+        android:id="@+id/random_btn"
+        android:layout_below="@+id/random_txt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Read"
+        android:id="@+id/read_btn"
+        android:layout_below="@+id/random_txt"
+        android:layout_toRightOf="@+id/random_btn"
+        android:layout_toEndOf="@+id/random_btn"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="write"
+        android:id="@+id/write_btn"
+        android:layout_below="@+id/random_txt"
+        android:layout_toRightOf="@+id/read_btn"
+        android:layout_toEndOf="@+id/read_btn"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/input_txt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/random_btn"
+        android:layout_alignRight="@+id/start_service_btn"
+        android:layout_alignEnd="@+id/start_service_btn"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:text="output from file"
+        android:id="@+id/output_lbl"
+        android:layout_below="@+id/input_txt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/start_service_btn"
+        android:layout_alignEnd="@+id/start_service_btn"/>
+
+</RelativeLayout>
