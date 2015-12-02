@@ -36,6 +36,11 @@ public class NineActivity extends AppCompatActivity {
             score_json.put(10);
             score_json.put(25);
             student_json.put("score", score_json);
+            //this will convert json object to string
+            Sc.debug(String.valueOf(student_json.toString()));
+            //this will get value 10
+            JSONArray get_score = student_json.getJSONArray("score");
+            Sc.debug(String.valueOf(get_score.get(0)));
 
             tv_name.setText("Name : " + student_json.getString("name"));
             JSONObject str_json_address = (JSONObject) student_json.get("address");

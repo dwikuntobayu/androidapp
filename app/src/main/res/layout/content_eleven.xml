@@ -23,14 +23,24 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
 
-    <TextView
+    <ScrollView
+        android:id="@+id/SCROLLER_ID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Small Text"
-        android:id="@+id/lbl_http_connection"
         android:layout_below="@+id/btn_request"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="24dp"/>
+        android:layout_marginTop="24dp"
+        android:scrollbars="vertical"
+        android:fillViewport="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text=""
+            android:id="@+id/lbl_http_connection"
+            android:background="@drawable/border"
+            android:textSize="16px"
+            />
+    </ScrollView>
 </RelativeLayout>
