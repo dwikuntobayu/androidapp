@@ -222,5 +222,15 @@
             android:layout_toRightOf="@+id/btn_nine"
             android:layout_toEndOf="@+id/btn_nine"/>
 
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="eleven"
+            android:id="@+id/btn_eleven"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/rating_btn"
+            android:layout_alignStart="@+id/rating_btn"/>
+
     </RelativeLayout>
 </ScrollView>
