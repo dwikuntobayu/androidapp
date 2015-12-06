@@ -3,7 +3,8 @@ package com.mdwikuntobayu.androidbasic.models;
 /**
  * Created by wgs-lap148 on 12/3/15.
  */
-public class User {
+public class
+        User {
     private int id;
     private String email;
     private String password;

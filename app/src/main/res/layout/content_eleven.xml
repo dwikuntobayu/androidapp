@@ -43,4 +43,13 @@
             android:textSize="16px"
             />
     </ScrollView>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lv_user"
+        android:layout_below="@+id/SCROLLER_ID"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="33dp"/>
 </RelativeLayout>
