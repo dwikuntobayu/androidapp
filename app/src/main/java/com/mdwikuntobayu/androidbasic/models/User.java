@@ -1,16 +1,34 @@
 package com.mdwikuntobayu.androidbasic.models;
 
-/**
- * Created by wgs-lap148 on 12/3/15.
- */
-public class
-        User {
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class User {
+//    List<User> users;
+//
+//    public List<User> getUserList() {
+//        return users;
+//    }
+//
+//    public void setUserList(List<User> userList) {
+//        this.users = userList;
+//    }
+
     private int id;
     private String email;
     private String password;
     private String token_auth;
     private String created_at;
     private String updated_at;
+
+    public User(String email, String password, String token_auth) {
+        this.email = email;
+        this.password = password;
+        this.token_auth = token_auth;
+    }
 
     public int getId() {
         return id;

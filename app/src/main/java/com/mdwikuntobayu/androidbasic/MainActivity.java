@@ -24,7 +24,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     Button calculate_btn, see_btn, meat_btn, rating_btn, next_second_btn,
             fourth_btn, five_btn, six_btn, seven_btn, eight_btn, nine_btn,
-            ten_btn, eleven_btn;
+            ten_btn, eleven_btn, twelve_btn;
     CheckBox inu, neko;
     RadioGroup meat_rb_g;
     RadioButton meat_rb;
@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         nine_btn = (Button)findViewById(R.id.btn_nine);
         ten_btn = (Button)findViewById(R.id.btn_ten);
         eleven_btn = (Button)findViewById(R.id.btn_eleven);
+        twelve_btn = (Button)findViewById(R.id.btn_twelve);
 
         // Register the onClick listener with the implementation above
         calculate_btn.setOnClickListener(this);
@@ -89,6 +90,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         nine_btn.setOnClickListener(this);
         ten_btn.setOnClickListener(this);
         eleven_btn.setOnClickListener(this);
+        twelve_btn.setOnClickListener(this);
 
         check_star();
     }
@@ -216,6 +218,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent next_eleven = new Intent("com.mdwikuntobayu.androidbasic.ElevenActivity");
                 startActivity(next_eleven);
                 break;
+
+            case R.id.btn_twelve:
+                Intent next_twelve = new Intent("com.mdwikuntobayu.androidbasic.TwelveActivity");
+                startActivity(next_twelve);
+                break;
+
 
             default:
                 break;

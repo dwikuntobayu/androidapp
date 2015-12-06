@@ -235,6 +235,7 @@ public class ElevenActivity extends AppCompatActivity {
         }
     }
 
+    //this for handle show data to ui
     public class UserAdapter extends ArrayAdapter {
         private List<User> user_list;
         private int resource;

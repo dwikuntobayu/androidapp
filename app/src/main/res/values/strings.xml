@@ -19,4 +19,5 @@
     <string name="title_activity_nine">NineActivity</string>
     <string name="title_activity_ten">TenActivity</string>
     <string name="title_activity_eleven">ElevenActivity</string>
+    <string name="title_activity_twelve">TwelveActivity</string>
 </resources>
