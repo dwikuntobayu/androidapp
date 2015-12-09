@@ -56,6 +56,8 @@ public class TwelveActivity extends AppCompatActivity {
 //        Call<User> call = user_api.deleteUser("saf23984n8(*dsjf");
         // // implement for show a user
 //        Call<User> call = user_api.getUser("saf23984n8(*dsjf");
+        // // implement for update a user
+//        Call<User> call = user_api.updateUser("saf23984n8(*dsjf", new User("", "12345667", ""));
         call.enqueue(new Callback<Users>() {
             @Override
             public void onResponse(Response<Users> response, Retrofit retrofit) {

@@ -1,21 +1,6 @@
 package com.mdwikuntobayu.androidbasic.models;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class User {
-//    List<User> users;
-//
-//    public List<User> getUserList() {
-//        return users;
-//    }
-//
-//    public void setUserList(List<User> userList) {
-//        this.users = userList;
-//    }
 
     private int id;
     private String email;
