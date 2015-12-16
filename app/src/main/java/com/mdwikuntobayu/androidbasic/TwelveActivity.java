@@ -41,7 +41,7 @@ public class TwelveActivity extends AppCompatActivity {
                 .create();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.0.2.2:3000")
+                .baseUrl("http://private-2bc04-androidapi4.apiary-mock.com")
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 

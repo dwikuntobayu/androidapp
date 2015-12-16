@@ -228,7 +228,7 @@
             android:layout_height="wrap_content"
             android:text="eleven"
             android:id="@+id/btn_eleven"
-            android:layout_alignParentBottom="true"
+            android:layout_above="@+id/btn_thirteen"
             android:layout_alignLeft="@+id/rating_btn"
             android:layout_alignStart="@+id/rating_btn"/>
 
@@ -241,6 +241,16 @@
             android:layout_alignTop="@+id/seven_btn"
             android:layout_toRightOf="@+id/btn_ten"
             android:layout_toEndOf="@+id/btn_ten"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="thirteen"
+            android:id="@+id/btn_thirteen"
+            android:layout_below="@+id/btn_eight"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
 
     </RelativeLayout>
 </ScrollView>

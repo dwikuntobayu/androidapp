@@ -20,4 +20,7 @@
     <string name="title_activity_ten">TenActivity</string>
     <string name="title_activity_eleven">ElevenActivity</string>
     <string name="title_activity_twelve">TwelveActivity</string>
+    <string name="title_activity_thirteen">ThirteenActivity</string>
+    <string name="navigation_item_1">Home</string>
+    <string name="navigation_item_2">Login</string>
 </resources>

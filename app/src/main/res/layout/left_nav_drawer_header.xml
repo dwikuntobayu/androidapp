@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/colorLeftNavHeader"
+                android:visibility="visible"
+                android:alpha="80"
+                android:clipChildren="false">
+
+    <ImageView
+        android:layout_height="80dp"
+        android:layout_width="80dp"
+        android:src="@drawable/android_round2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:id="@+id/imageView"
+        android:background="@drawable/nav_border"
+        android:clickable="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No"
+        android:id="@+id/textView2"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_marginLeft="37dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="39dp"
+        android:textSize="25dp"
+        android:textColor="@color/colorAccent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        android:id="@+id/textView3"
+        android:textSize="25dp"
+        android:textColor="@color/colorAccent"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_toLeftOf="@+id/imageView"
+        android:layout_toStartOf="@+id/imageView"
+        android:layout_marginRight="40dp"
+        android:layout_marginEnd="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="^.^"
+        android:id="@+id/textView4"
+        android:textSize="25dp"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

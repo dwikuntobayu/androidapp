@@ -3,6 +3,7 @@ package com.mdwikuntobayu.androidbasic;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -24,7 +25,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     Button calculate_btn, see_btn, meat_btn, rating_btn, next_second_btn,
             fourth_btn, five_btn, six_btn, seven_btn, eight_btn, nine_btn,
-            ten_btn, eleven_btn, twelve_btn;
+            ten_btn, eleven_btn, twelve_btn, thirteen_btn;
     CheckBox inu, neko;
     RadioGroup meat_rb_g;
     RadioButton meat_rb;
@@ -73,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ten_btn = (Button)findViewById(R.id.btn_ten);
         eleven_btn = (Button)findViewById(R.id.btn_eleven);
         twelve_btn = (Button)findViewById(R.id.btn_twelve);
+        thirteen_btn = (Button)findViewById(R.id.btn_thirteen);
 
         // Register the onClick listener with the implementation above
         calculate_btn.setOnClickListener(this);
@@ -91,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ten_btn.setOnClickListener(this);
         eleven_btn.setOnClickListener(this);
         twelve_btn.setOnClickListener(this);
+        thirteen_btn.setOnClickListener(this);
 
         check_star();
     }
@@ -224,6 +227,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(next_twelve);
                 break;
 
+            case R.id.btn_thirteen:
+                Intent next_thirteen = new Intent("com.mdwikuntobayu.androidbasic.ThirteenActivity");
+                startActivity(next_thirteen);
+                break;
 
             default:
                 break;
