@@ -33,4 +33,11 @@
         android:layout_toRightOf="@+id/tv_label_token"
         android:layout_toEndOf="@+id/tv_label_token"/>
 
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_place"
+        android:name="com.mdwikuntobayu.androidbasic.FragmentOne"
+        ></fragment>
+
 </RelativeLayout>
