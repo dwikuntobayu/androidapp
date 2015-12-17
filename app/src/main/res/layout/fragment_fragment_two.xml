@@ -3,12 +3,20 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              tools:context="com.mdwikuntobayu.androidbasic.FragmentTwo"
-             android:background="#b74ebd">
+            >
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"/>
+        android:text="Two Fragment"
+        android:background="#b74ebd"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fragment two"
+        android:id="@+id/textView6"
+        android:layout_gravity="right|center_vertical"/>
 
 </FrameLayout>
