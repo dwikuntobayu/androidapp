@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -27,6 +28,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -37,7 +39,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class ThirteenActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    TextView tv_shared_preference, tv_internal_storage;
+    TextView tv_shared_preference, tv_internal_storage, tv_external_storage;
     NavigationView nv_left;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +49,7 @@ public class ThirteenActivity extends AppCompatActivity implements NavigationVie
         setSupportActionBar(toolbar);
         tv_shared_preference = (TextView)findViewById(R.id.tv_shared_preference);
         tv_internal_storage = (TextView)findViewById(R.id.tv_internal_storage);
+        tv_external_storage = (TextView)findViewById(R.id.tv_external_storage);
 
         //this for handle base fragment
         Fragment base_fragment = new FragmentOne();
@@ -93,7 +96,8 @@ public class ThirteenActivity extends AppCompatActivity implements NavigationVie
         nv_left = (NavigationView)findViewById(R.id.navigation);
         nv_left.setNavigationItemSelectedListener(this);
 
-        //set value from internal storage
+
+        //------Example usage of internal storage-----
         //internal storage can be access from different activity
         try {
             FileOutputStream set_internal_storage = openFileOutput("authentication", Context.MODE_PRIVATE);
@@ -118,8 +122,71 @@ public class ThirteenActivity extends AppCompatActivity implements NavigationVie
         } catch (IOException e) {
             e.printStackTrace();
         }
+        //-----end usage internal storage------
 
+
+        //-----Example Usage of External Storage-----
+        //every will usage external storage must check available for read n write
+
+        try {
+            this.save_to_es("dwikunto.txt", String.valueOf("Exsternal storage : lorem ipsum ujang ganteng ulah nyerah"));
+            tv_external_storage.setText(this.read_from_es("dwikunto.txt"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        //----end usage external storage-----
     }
+
+    //if it available to read write
+    public boolean check_es_can_read_write() {
+        String state = Environment.getExternalStorageState();
+        if(Environment.MEDIA_MOUNTED.equals(state)) {
+            return true;
+        }
+        return false;
+    }
+    //if it available at least to read
+    public boolean check_es_can_read() {
+        String state = Environment.getExternalStorageState();
+        if(Environment.MEDIA_MOUNTED.equals(state) || Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
+            return true;
+        }
+        return false;
+    }
+
+    public void save_to_es(String file_name, String data) throws IOException {
+        if(check_es_can_read_write()) {
+            File path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+            if(!path.exists()) path.mkdirs();
+            File file = new File(path, file_name);
+            if(!file.exists()) file.createNewFile();
+            FileOutputStream set_internal_storage = new FileOutputStream(file);
+            set_internal_storage.write(data.getBytes());
+            set_internal_storage.close();
+        }
+    }
+
+    public String read_from_es(String file_name) throws IOException {
+        if(check_es_can_read()) {
+            File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), file_name);
+            if(file.exists()) {
+                FileInputStream get_internal_storage = new FileInputStream(file);
+                InputStreamReader input_stream_reader = new InputStreamReader(get_internal_storage);
+                BufferedReader buffered_reader = new BufferedReader(input_stream_reader);
+                StringBuilder string_builder = new StringBuilder();
+                String line;
+                while((line = buffered_reader.readLine()) != null) {
+                    string_builder.append(line);
+                }
+                return string_builder.toString();
+            } else {
+                return "";
+            }
+        }
+        return "";
+    }
+
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
