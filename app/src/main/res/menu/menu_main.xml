@@ -21,5 +21,6 @@
           android:title="@string/mi_hazard"
           android:orderInCategory="4"
           app:showAsAction="always"
+          android:checkable="true"
           android:icon="@drawable/dashinfinity"/>
 </menu>

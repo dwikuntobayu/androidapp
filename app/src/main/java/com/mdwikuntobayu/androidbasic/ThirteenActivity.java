@@ -13,6 +13,8 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -41,15 +43,20 @@ import java.util.Set;
 public class ThirteenActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     TextView tv_shared_preference, tv_internal_storage, tv_external_storage;
     NavigationView nv_left;
+    DrawerLayout dl_nav_left;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thirteen);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle(null);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         tv_shared_preference = (TextView)findViewById(R.id.tv_shared_preference);
         tv_internal_storage = (TextView)findViewById(R.id.tv_internal_storage);
         tv_external_storage = (TextView)findViewById(R.id.tv_external_storage);
+        dl_nav_left = (DrawerLayout)findViewById(R.id.drawer_layout);
 
         //this for handle base fragment
         Fragment base_fragment = new FragmentOne();
@@ -216,5 +223,44 @@ public class ThirteenActivity extends AppCompatActivity implements NavigationVie
                 break;
         }
         return false;
+    }
+
+    //this need for load menu in toolbar
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    //this for firstime declaration of menu
+    //at first time button infinity (menu item) will set to true
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        MenuItem infinity = menu.findItem(R.id.mi_infinity);
+        infinity.setChecked(true);
+
+        return super.onPrepareOptionsMenu(menu);
+    }
+
+    //this for handle toolbar on click action
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        switch (item.getItemId()) {
+            //this will use for toggle button infinity
+            //when user click navigation will show and hide
+            case R.id.mi_infinity:
+                if(item.isChecked()) {
+                    dl_nav_left.openDrawer(GravityCompat.START);
+                    item.setChecked(false);
+                } else {
+                    dl_nav_left.closeDrawers();
+                    item.setChecked(true);
+                }
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
