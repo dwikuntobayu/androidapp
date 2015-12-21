@@ -4,6 +4,22 @@
       tools:context=".MainActivity">
     <item android:id="@+id/refresh"
           android:title="@string/action_settings"
-          android:orderInCategory="100"
-          app:showAsAction="never"/>
+          android:orderInCategory="1"
+          app:showAsAction="never"
+          android:icon="@drawable/ic_action_name"/>
+    <item android:id="@+id/mi_cycle"
+          android:title="@string/mi_cycle"
+          android:orderInCategory="2"
+          app:showAsAction="always|withText"
+          android:icon="@drawable/ic_action_name"/>
+    <item android:id="@+id/mi_hazard"
+          android:title="@string/mi_hazard"
+          android:orderInCategory="3"
+          app:showAsAction="always"
+          android:icon="@drawable/ic_action_name2"/>
+    <item android:id="@+id/mi_infinity"
+          android:title="@string/mi_hazard"
+          android:orderInCategory="4"
+          app:showAsAction="always"
+          android:icon="@drawable/dashinfinity"/>
 </menu>
