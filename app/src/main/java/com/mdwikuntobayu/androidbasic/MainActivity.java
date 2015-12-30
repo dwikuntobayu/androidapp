@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button calculate_btn, see_btn, meat_btn, rating_btn, next_second_btn,
             fourth_btn, five_btn, six_btn, seven_btn, eight_btn, nine_btn,
             ten_btn, eleven_btn, twelve_btn, thirteen_btn, fourteen_btn,
-            fiveteen_btn;
+            fiveteen_btn, sixteen_btn;
     CheckBox inu, neko;
     RadioGroup meat_rb_g;
     RadioButton meat_rb;
@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         thirteen_btn = (Button)findViewById(R.id.btn_thirteen);
         fourteen_btn = (Button)findViewById(R.id.btn_fourteen);
         fiveteen_btn = (Button)findViewById(R.id.btn_fiveteen);
+        sixteen_btn = (Button)findViewById(R.id.btn_sixteen);
 
         // Register the onClick listener with the implementation above
         calculate_btn.setOnClickListener(this);
@@ -99,6 +100,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         thirteen_btn.setOnClickListener(this);
         fourteen_btn.setOnClickListener(this);
         fiveteen_btn.setOnClickListener(this);
+        sixteen_btn.setOnClickListener(this);
 
         check_star();
     }
@@ -245,6 +247,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_fiveteen:
                 Intent next_fiveteen = new Intent("com.mdwikuntobayu.androidbasic.FiveteenActivity");
                 startActivity(next_fiveteen);
+                break;
+
+            case R.id.btn_sixteen:
+                Intent next_sixteen = new Intent("com.mdwikuntobayu.androidbasic.SixteenActivity");
+                startActivity(next_sixteen);
                 break;
 
             default:
