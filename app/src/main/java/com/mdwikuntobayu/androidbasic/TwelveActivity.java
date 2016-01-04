@@ -6,19 +6,9 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.mdwikuntobayu.androidbasic.models.User;
 import com.mdwikuntobayu.androidbasic.models.Users;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
-import java.util.Objects;
 
 import retrofit.Call;
 import retrofit.Callback;

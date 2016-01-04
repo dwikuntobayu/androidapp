@@ -3,8 +3,6 @@ package com.mdwikuntobayu.androidbasic;
 import com.mdwikuntobayu.androidbasic.models.User;
 import com.mdwikuntobayu.androidbasic.models.Users;
 
-import java.util.List;
-
 import retrofit.Call;
 import retrofit.http.Body;
 import retrofit.http.DELETE;
