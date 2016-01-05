@@ -28,4 +28,5 @@
     <string name="mi_hazard">Hazard</string>
     <string name="title_activity_fiveteen">FiveteenActivity</string>
     <string name="title_activity_sixteen">SixteenActivity</string>
+    <string name="title_activity_seventeen">SeventeenActivity</string>
 </resources>

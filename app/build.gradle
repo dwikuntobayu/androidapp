@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.mdwikuntobayu.androidbasic"
-        minSdkVersion 8
+        minSdkVersion 14
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -36,4 +36,5 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.github.bumptech.glide:glide:3.6.1'
     compile 'com.github.PhilJay:MPAndroidChart:v2.1.6'
+    compile 'com.github.clans:fab:1.6.2'
 }
